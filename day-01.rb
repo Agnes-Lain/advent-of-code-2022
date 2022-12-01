@@ -2,21 +2,28 @@ require_relative 'common'
 
 class Day1 < AdventDay
   def first_part
-    input.last(2).sum
+    a = input.join(",").split(",,")
+    na = a.map{|e| e.split(",").map{|s| s.to_i}}
+    c = na.map{|arr| arr.sum}
+    c.max
   end
 
   def second_part
-    input.last(2).map(&:to_s).map(&:reverse).map(&:to_i).sum
+    a = input.join(",").split(",,")
+    na = a.map{|e| e.split(",").map{|s| s.to_i}}
+    c = na.map{|arr| arr.sum}
+    first = c.max
+    c.sort[-3..-1].sum
   end
 
   private
 
   def convert_data(data)
-    super.map(&:to_i)
+    super
   end
 
   def debug_input
-    "12\n34\n56"
+    "1000\n2000\n3000\n\n4000\n\n5000\n6000\n\n7000\n8000\n9000\n\n10000"
   end
 end
 
