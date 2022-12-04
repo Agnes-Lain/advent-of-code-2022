@@ -1,4 +1,5 @@
 require_relative 'common'
+require 'byebug'
 
 class Day5 < AdventDay
   def first_part
@@ -12,6 +13,11 @@ class Day5 < AdventDay
   def convert_data(data)
     super
   end
+
+  def debug_input
+    ""
+  end
+
 end
 
 Day5.solve

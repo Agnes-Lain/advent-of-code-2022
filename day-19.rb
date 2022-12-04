@@ -12,6 +12,11 @@ class Day19 < AdventDay
   def convert_data(data)
     super
   end
+
+  def debug_input
+    ""
+  end
+  
 end
 
 Day19.solve
